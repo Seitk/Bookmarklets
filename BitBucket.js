@@ -36,7 +36,7 @@ $('.comment-thread-container').each(function() {
  * Toggle all comments
  **/
 
-// Source
+// Minified
 $(".comment-thread-container").first().is(":visible")?$(".comment-thread-container").hide():$(".comment-thread-container").show();
 
 // Source
