@@ -1,0 +1,27 @@
+---
+title: Bookmarklets
+description: Just some bookmarklets that I use
+permalink: /
+---
+
+<div>
+  <div>
+    <h3>BitBucket</h3>
+    <p>
+      <a href='javascript:(function(){var currentTop=$(window).scrollTop(),done=!1;$(".comment-thread-container").each(function(){0==done&&$(this).offset().top>currentTop&&($(window).scrollTop($(this).offset().top),done=!0)});})();'>Previous comment</a>
+    </p>
+    <p>
+      <a href='javascript:(function(){var currentTop=$(window).scrollTop(),done=!1;$(".comment-thread-container").each(function(){0==done&&$(this).offset().top<currentTop&&($(window).scrollTop($(this).offset().top),done=!0)});})();'>Next comment</a>
+    </p>
+    <p>
+      <a href='javascript:(function(){$(".comment-thread-container").first().is(":visible")?$(".comment-thread-container").hide():$(".comment-thread-container").show();})();'>Toggle comments</a>
+    </p>
+  </div>
+  <div>
+    <h3>Others</h3>
+    <p>
+      <a href='javascript:(function(){!function(){function e(e,t){var n=document.createElement("script");n.src=e;var o=document.getElementsByTagName("head")[0],i=!1;n.onload=n.onreadystatechange=function(){i||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState||(i=!0,t(),n.onload=n.onreadystatechange=null,o.removeChild(n))},o.appendChild(n)}function t(){o.innerHTML="Paste the url and press enter:<br/><input id=\"script-src\">",i.appendChild(o);var t=document.getElementById("script-src");t.style.width="100%",t.addEventListener("keyup",function(i){if(13===i.keyCode){var d=t.value;e(d,function(){return msg="Script "+d+" loaded",n()})}else 27===i.keyCode&&(t.removeEventListener("keyup",this),o.remove())})}function n(){o.innerHTML=msg,i.appendChild(o),window.setTimeout(function(){"undefined"==typeof jQuery?i.removeChild(o):(jQuery(o).fadeOut("slow",function(){jQuery(this).remove()}),otherlib&&($jq=jQuery.noConflict()))},2500)}var o=document.createElement("div"),i=document.getElementsByTagName("body")[0];otherlib=!1,msg="",o.style.position="fixed",o.style.height="50px",o.style.width="220px",o.style.marginLeft="-110px",o.style.top="0",o.style.left="50%",o.style.padding="5px 10px",o.style.zIndex=9999,o.style.fontSize="12px",o.style.color="#222",o.style.backgroundColor="#fff",o.style.boxShadow="0px 5px 5px rgba(0,0,0,0.2)",window.showScriptDialog=t,showScriptDialog()}();})();'>JS Injection</a><br>
+      <span>Create a panel for injecting javascript into current website by URL</span>
+    </p>
+  </div> 
+</div>
